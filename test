@@ -2,7 +2,8 @@
 -- init
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
-
+local Notification = Instance.new("Sound", workspace)
+Notification.SoundId = "rbxassetid://3398620867"
 -- services
 local input = game:GetService("UserInputService")
 local run = game:GetService("RunService")
@@ -508,6 +509,7 @@ do
 		end
 		
 		-- standard create
+		Notification:Play()
 		local notification = utility:Create("ImageLabel", {
 			Name = "Notification",
 			Parent = self.container,
